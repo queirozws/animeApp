@@ -1,0 +1,48 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  width: 300px;
+}
+
+/* .sidenav-container {
+  height: 100%;
+} */
+
+/* .toolbar-container {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+} */
+
+.logo {
+  height: 64px;
+}
+
+.card.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px 30px;
+  padding-top: 30px;
+  /* margin: 65px; */
+}
+
+.logo.container {
+  text-align: center;
+}
+
+/* .img.logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+} */

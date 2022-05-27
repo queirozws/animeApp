@@ -1,0 +1,38 @@
+<mat-sidenav-container class="example-container">
+
+  <mat-sidenav #sidenav class="sidenav" mode="side" [(opened)]="toolbar.menuToggled">
+    
+    <div class="logo container">
+      <img class="img logo" src="../../../../assets/logo.jpeg">
+    </div>
+    
+    <mat-divider></mat-divider>
+
+    <ul>
+      <li>Animes</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <!-- <router-outlet></router-outlet> -->
+
+    <app-toolbar class="toolbar-container" #toolbar></app-toolbar>
+
+    <div class="card container">
+
+      <ng-container *ngFor="let recomendation of recomendationList">
+        <app-anime-card [anime]="recomendation"></app-anime-card>
+      </ng-container>
+
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<app-anime-card></app-anime-card>
