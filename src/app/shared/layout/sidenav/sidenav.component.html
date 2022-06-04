@@ -20,17 +20,9 @@
 
   <mat-sidenav-content>
 
-    <!-- <router-outlet></router-outlet> -->
-
     <app-toolbar class="toolbar-container" #toolbar></app-toolbar>
 
-    <div class="card container">
-
-      <ng-container *ngFor="let recomendation of recomendationList">
-        <app-anime-card [anime]="recomendation"></app-anime-card>
-      </ng-container>
-
-    </div>
+    <!-- <router-outlet></router-outlet> -->
 
   </mat-sidenav-content>
 </mat-sidenav-container>
