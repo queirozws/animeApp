@@ -1,0 +1,41 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  background-image: url('/assets/logo.jpeg');
+  background-position-y: 10%;
+  background-size: cover;
+  width: min-content;
+  background-clip: text;
+  /* -webkit-background-clip: text; */
+  color: rgba(0, 0, 0, 0.082);
+  font-size: 200px;
+  padding: 100px;
+  height: auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+
+label {
+  color: white;
+  font-size: larger;
+}
+
+input {
+  margin: 20px 0px;
+  height: 30px;
+}
+
+button {
+  width: 33%;
+  align-self: center;
+}
