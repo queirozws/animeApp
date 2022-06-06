@@ -6,7 +6,7 @@
 }
 
 .text {
-  background-image: url('/assets/logo.jpeg');
+  background-image: url('https://queirozws.github.io/animeApp/assets/logo.jpeg');
   background-position-y: 10%;
   background-size: cover;
   width: min-content;
