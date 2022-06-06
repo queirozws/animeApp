@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LayoutRoutingModule } from './layout-routing.module';
+
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AnimeCardComponent } from '../../anime-card/anime-card.component';
 
@@ -12,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -19,10 +22,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   declarations: [
     ToolbarComponent,
     SidenavComponent,
-    AnimeCardComponent
+    AnimeCardComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
+    LayoutRoutingModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
