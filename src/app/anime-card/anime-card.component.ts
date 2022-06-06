@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-anime-card',
@@ -10,7 +11,17 @@ export class AnimeCardComponent implements OnInit {
   @Input()
   anime = <any>{};
 
-  constructor() { }
+  recomendationList: any;
+
+  constructor(private api: ApiServiceService) {
+    this.api.get().subscribe( data => {
+      this.recomendationList = data.data;
+
+      console.log(data.data);
+    }
+    );
+
+  }
 
   ngOnInit(): void {
   }

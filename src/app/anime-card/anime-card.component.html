@@ -1,51 +1,63 @@
-<mat-card class="anime-card">
+<div class="card container">
 
-  <mat-card-header>
-    <!-- <div mat-card-avatar class="example-header-image"></div> -->
-    <mat-card-title>{{anime.title_english || anime.title}}</mat-card-title>
-    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-  </mat-card-header>
+  <ng-container *ngFor="let anime of recomendationList">
+    <!-- <app-anime-card [anime]="recomendation"></app-anime-card> -->
 
-  <mat-divider></mat-divider>
+    <mat-card class="anime-card">
 
-  <img mat-card-image src="{{anime.images?.jpg.image_url}}" alt="Photo of a Cowboy Bebop">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>{{anime.title_english || anime.title}}</mat-card-title>
+        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+      </mat-card-header>
+  
+      <mat-divider></mat-divider>
+  
+      <a href="" [routerLink]="['/detail', anime.mal_id]">
+        <img mat-card-image src="{{anime.images?.jpg.image_url}}" alt="Photo of a Cowboy Bebop">
+      </a>
+      
+  
+      <mat-card-content>
+        <div class="rate" style="display: flex; align-items: center">
+          <mat-icon>star</mat-icon>
+          <span>{{anime.score}}</span>
+        </div>
+        <!-- <p class="synopsis">{{anime.synopsis}}</p> -->
+      </mat-card-content>
+  
+      <mat-card-actions [align]="'end'">
+        <!-- <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> -->
+  
+        <button
+          mat-icon-button
+          class="favorite-icon"
+          aria-label="icon-button with heart icon"
+          matTooltip="Favorite your anime">
+          <mat-icon>favorite</mat-icon>
+        </button>
+  
+        <button
+          mat-icon-button
+          class="share-icon"
+          aria-label="icon-button with share icon"
+          matTooltip="Share your anime">
+          <mat-icon>share</mat-icon>
+        </button>
+        
+        <button
+          mat-icon-button
+          class="bookmark-add-icon"
+          aria-label="icon-button with menu icon"
+          matTooltip="Bookmark your anime">
+          <mat-icon>bookmark_add</mat-icon>
+        </button>
+        
+      </mat-card-actions>
+  
+    </mat-card>
 
-  <mat-card-content>
-    <div class="rate" style="display: flex; align-items: center">
-      <mat-icon>star</mat-icon>
-      <span>{{anime.score}}</span>
-    </div>
-    <!-- <p class="synopsis">{{anime.synopsis}}</p> -->
-  </mat-card-content>
+  </ng-container>
 
-  <mat-card-actions [align]="'end'">
-    <!-- <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button> -->
-
-    <button
-      mat-icon-button
-      class="favorite-icon"
-      aria-label="icon-button with heart icon"
-      matTooltip="Favorite your anime">
-      <mat-icon>favorite</mat-icon>
-    </button>
-
-    <button
-      mat-icon-button
-      class="share-icon"
-      aria-label="icon-button with share icon"
-      matTooltip="Share your anime">
-      <mat-icon>share</mat-icon>
-    </button>
-    
-    <button
-      mat-icon-button
-      class="bookmark-add-icon"
-      aria-label="icon-button with menu icon"
-      matTooltip="Bookmark your anime">
-      <mat-icon>bookmark_add</mat-icon>
-    </button>
-    
-  </mat-card-actions>
-
-</mat-card>
+</div>
