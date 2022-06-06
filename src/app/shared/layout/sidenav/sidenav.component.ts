@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -10,19 +9,9 @@ export class SidenavComponent implements OnInit {
 
   opened: boolean = true;
 
-  recomendationList: any;
+  constructor() { }
 
-  constructor(private api: ApiServiceService) { }
-
-  ngOnInit(): void {
-    this.api.get().subscribe( data => {
-      this.recomendationList = data.data;
-
-      console.log('ngOnInit');
-    }
-    );
-
-  }
+  ngOnInit(): void { }
 
   getAnimeList(): any {
     return [

@@ -3,17 +3,18 @@
   <mat-sidenav #sidenav class="sidenav" mode="side" [(opened)]="toolbar.menuToggled">
     
     <div class="logo container">
-      <img class="img logo" src="assets/logo.jpeg">
+      <a href="/">
+        <img class="img logo" src="assets/logo.jpeg">
+      </a>
+      
     </div>
     
     <mat-divider></mat-divider>
 
     <ul>
-      <li>Animes</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li routerLinkActive="active-menu"><a href="" [routerLink]="['/recomendations']" >Recomendations</a></li>
+      <!-- <li routerLinkActive="active-menu"><a href="" [routerLink]="['/myreviews']" >My Reviews</a></li>
+      <li routerLinkActive="active-menu"><a href="" [routerLink]="['/recent']" >Recent added</a></li> -->
     </ul>
 
   </mat-sidenav>
@@ -22,9 +23,8 @@
 
     <app-toolbar class="toolbar-container" #toolbar></app-toolbar>
 
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-<app-anime-card></app-anime-card>
