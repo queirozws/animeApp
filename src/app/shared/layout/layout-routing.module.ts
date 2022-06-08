@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimeCardComponent } from 'src/app/anime-card/anime-card.component';
+import { AnimeDetailComponent } from 'src/app/anime-detail/anime-detail.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -10,13 +11,13 @@ const routes: Routes = [
     // children: [
     //   {
     //     path: 'detail/:id',
-    //     component: LoginComponent
+    //     component: AnimeDetailComponent
     //   }
     // ]
   },
   {
     path: 'detail/:id',
-    component: LoginComponent
+    component: AnimeDetailComponent
   }
 ];
 

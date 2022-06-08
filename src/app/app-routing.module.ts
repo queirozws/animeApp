@@ -9,9 +9,13 @@ const routes: Routes = [
     component: SidenavComponent,
     children: [
       {
-        path: 'recomendations',
+        path: 'animes',
         loadChildren: () => import('./shared/layout/layout.module').then(m => m.LayoutModule)
-      }
+      },
+      // {
+      //   path: 'detail:id',
+      //   loadChildren: () => import('./shared/layout/layout.module').then(m => m.LayoutModule)
+      // }
     ]
   },
   {

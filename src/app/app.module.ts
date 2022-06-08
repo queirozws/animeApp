@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LayoutModule } from './shared/layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AnimeDetailComponent } from './anime-detail/anime-detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnimeDetailComponent
   ],
   imports: [
     BrowserModule,

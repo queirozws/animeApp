@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/animeApp/"
+    "deploy": "git push && ng deploy --base-href=/animeApp/"
   },
   "private": true,
   "dependencies": {
